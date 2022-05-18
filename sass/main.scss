@@ -1,22 +1,44 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+//     width: 70%;
+//     position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+}
+
+.bg-dark{
+    background-color: #101820!important;
+    border-radius: 2px;
+}
+
 .main-wrapper{
 display: flex;
 justify-content: center;
 }
 .converter-wrapper{
-    background-color: grey;
-    margin-top: 50px;
-    width: 80%;
+    background-color: #F2AA4C;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     height: 500px;
+    border-radius: 2px;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    h2{
+        margin: 14px 0px;
+    }
     button{
         width: 200px;
         margin: 10px auto;
     }
 }
 .converter-wrapper-input{
-   
+   margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -47,5 +69,55 @@ justify-content: center;
             width: 270px;
             margin: 10px;
         }
+    }
+}
+.main-wrapper-portfolio{
+    h2{
+        text-align: center;
+        margin-top: 25px;
+        margin-block-end: 0px;
+       }
+       display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio-wrapper{
+   background-color: #F2AA4C;
+    margin-top: 10px;
+    width: 100%;
+    height: 800px;
+    border-radius: 2px;
+
+    .portfolio-wrapper-div{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .my-money{
+        
+    padding: 18px;
+    span{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        margin: 10px 0px;
+         p{
+            font-size: 24px;
+            margin-bottom: 0px;
+         }
+        .btn{
+        margin: 6px;
+        width: 20%px; 
+        border: 1px solid #101820;
+        }
+    }
+}
+    .my-money-schedule{
+        padding: 18px;
+        width: 380px;
+        height: 400px;
     }
 }
