@@ -1,12 +1,14 @@
+@mixin shadowblock {
+    -webkit-box-shadow: 4px 4px 50px 10px rgba(118, 118, 118, 0.3);
+-moz-box-shadow: 4px 4px 50px 10px rgba(118, 118, 118, 0.3);
+box-shadow: 4px 4px 50px 10px rgba(118, 118, 118, 0.3);
+
+}
 body{
     font-family: 'Poppins', sans-serif;
 }
-.wrapper{
-//     width: 70%;
-//     position: absolute;
-//   left: 50%;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
+.wrapper{   
+    @include shadowblock();
 }
 
 .bg-dark{
@@ -24,11 +26,11 @@ justify-content: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 500px;
     border-radius: 2px;
     text-align: center;
     margin-top: 10px;
-    padding-top: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     h2{
         margin: 14px 0px;
     }
@@ -86,7 +88,6 @@ justify-content: center;
    background-color: #F2AA4C;
     margin-top: 10px;
     width: 100%;
-    height: 800px;
     border-radius: 2px;
 
     .portfolio-wrapper-div{
@@ -104,6 +105,10 @@ justify-content: center;
         align-items: center;
         align-content: center;
         margin: 10px 0px;
+        
+        img{
+            width: 2rem;
+        }
          p{
             font-size: 24px;
             margin-bottom: 0px;
@@ -112,12 +117,46 @@ justify-content: center;
         margin: 6px;
         width: 20%px; 
         border: 1px solid #101820;
+        
         }
     }
 }
     .my-money-schedule{
         padding: 18px;
         width: 380px;
-        height: 400px;
+        margin-bottom: 28px;
+        @include shadowblock();
+        border-radius: 10px;
     }
+}
+.crypto-14d-wrapper{
+    background-color: #F2AA4C;
+    h2{
+        text-align: center;
+        padding-top: 15px;
+        margin-block-end: 0px;
+    }
+    .crypto-14d-cards{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        .card{
+            margin: 15px;
+            border: none;
+            @include shadowblock();
+            background-color: #101820;
+
+        }
+        .card-img-top{
+            width: 6rem;
+            margin: 15px auto;
+        }
+        .card-body{
+            text-align: center;
+            background-color: #F2AA4C;
+        }
+    }
+    
+    
 }
