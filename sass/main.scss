@@ -8,6 +8,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 .wrapper{   
+    background-color: #F2AA4C;
     @include shadowblock();
 }
 
@@ -21,7 +22,6 @@ display: flex;
 justify-content: center;
 }
 .converter-wrapper{
-    background-color: #F2AA4C;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -85,7 +85,6 @@ justify-content: center;
     align-items: center;
 }
 .portfolio-wrapper{
-   background-color: #F2AA4C;
     margin-top: 10px;
     width: 100%;
     border-radius: 2px;
@@ -95,6 +94,7 @@ justify-content: center;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
+        margin-top: 20px;
     }
     .my-money{
         
@@ -105,17 +105,29 @@ justify-content: center;
         align-items: center;
         align-content: center;
         margin: 10px 0px;
-        
+        .form-control{
+            width: 180px;
+            background-color: #F2AA4C;
+            border: 1px solid #101820;
+            margin: 0px 5px;
+        }
         img{
             width: 2rem;
+            margin: 10px;
         }
          p{
             font-size: 24px;
-            margin-bottom: 0px;
+            margin: 0 10px;
+         }
+         .total{
+             font-size: 34px;
+         }
+         .h2{
+            text-align: center;
          }
         .btn{
         margin: 6px;
-        width: 20%px; 
+        width: 50%; 
         border: 1px solid #101820;
         
         }
@@ -130,7 +142,6 @@ justify-content: center;
     }
 }
 .crypto-14d-wrapper{
-    background-color: #F2AA4C;
     h2{
         text-align: center;
         padding-top: 15px;
@@ -141,6 +152,7 @@ justify-content: center;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
+        padding-bottom: 30px;
         .card{
             margin: 15px;
             border: none;
@@ -160,3 +172,40 @@ justify-content: center;
     
     
 }
+
+@media screen and (max-width: 769px) {
+    .converter-wrapper-input{
+    .after{
+        margin-left: 0px;
+    }
+    .before{
+        margin-right: 0px;
+    }
+}
+  }
+  @media screen and (max-width: 480px) {
+      .container{
+          padding: 0px;
+      }
+    .converter-wrapper-input{
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    .material-symbols-outlined{
+        transform: rotateZ(90deg);
+    }
+    }
+    .portfolio-wrapper{
+        .my-money{
+        
+            span{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-content: center;
+                
+            }
+        }
+    }
+    
+  }
