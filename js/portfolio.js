@@ -14,15 +14,24 @@ summETHValue.innerHTML = 'ETH: ' + summETH + '$';
 Total.innerHTML = 'Total: ' + total + '$';
 
 function btnBTCplusf(){
-    summBTC += parseFloat(inputBTC.value);
-    var total = summBTC + summETH;
-    summBTCValue.innerHTML = 'BTC: ' + summBTC + '$';
-    Total.innerHTML = 'Total: ' + total + '$';
-    myChart.config.data.datasets[0].data[0] = summBTC;
-    myChart.update();    
-    inputBTC.value = '';
+    if(inputBTC.value == ''){
+        alert('enter amount')
+    } else{
+        summBTC += parseFloat(inputBTC.value);
+        var total = summBTC + summETH;
+        summBTCValue.innerHTML = 'BTC: ' + summBTC + '$';
+        Total.innerHTML = 'Total: ' + total + '$';
+        myChart.config.data.datasets[0].data[0] = summBTC;
+        myChart.update();    
+        inputBTC.value = '';
+    }
+    
+    
 }
 function btnBTCminusf(){
+    if(inputBTC.value == ''){
+        alert('enter amount')
+    } else{
     summBTC -= parseFloat(inputBTC.value);
     var total = summBTC + summETH;
     summBTCValue.innerHTML = 'BTC: ' + summBTC + '$';
@@ -30,9 +39,13 @@ function btnBTCminusf(){
     myChart.config.data.datasets[0].data[0] = summBTC;
     myChart.update();
     inputBTC.value = '';
+    }
 }
 
 function btnETHplusf(){
+    if(inputETH.value == ''){
+        alert('enter amount')
+    } else{
     summETH += parseFloat(inputETH.value);
     var total = summBTC + summETH;
     summETHValue.innerHTML = 'ETH: ' + summETH + '$';
@@ -40,8 +53,12 @@ function btnETHplusf(){
     myChart.config.data.datasets[0].data[1] = summETH;
     myChart.update();
     inputETH.value = '';
+    }
 }
 function btnETHminusf(){
+    if(inputETH.value == ''){
+        alert('enter amount')
+    } else{
     summETH -= parseFloat(inputETH.value);
     var total = summBTC + summETH;
     summETHValue.innerHTML = 'ETH: ' + summETH + '$';
@@ -49,5 +66,6 @@ function btnETHminusf(){
     myChart.config.data.datasets[0].data[1] = summETH;
     myChart.update();
     inputETH.value = '';
+    }
 }
 
